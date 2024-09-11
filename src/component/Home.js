@@ -1,44 +1,57 @@
 import React from "react";
 import { taskList } from "../Shared/Utils";
 import { Link } from "react-router-dom";
-
+import { Box, Card, Grid, Typography } from "@mui/material";
 export default function Home() {
   return (
     <div>
-      <div
-        style={{
-          fontSize: "larger",
-          textAlign: "center",
-          margin: "10px",
+      <Box
+        sx={{
+          width: 400,
+          margin: "auto",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
         }}
       >
-        Lists
-      </div>
-      {taskList.length > 0 &&
-        taskList.map((item, index) => {
-          return (
-            <Link to={item.url} style={{ textDecoration: "none" }} key={index}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  gap: "1rem",
-                }}
-              >
-                {/* <div style={{ textAlign: "left" }}>
-									{index + 1} :-
-								</div>
-								<div style={{ textAlign: "right" }}>
-									{item.name}
-								</div> */}
-                <ul>
-                  <li>{item.name}</li>
-                </ul>
-              </div>
-            </Link>
-          );
-        })}
+        {taskList.map((item, index) => (
+          <Card
+            key={index}
+            sx={{
+              width: "100%",
+              mt: 1,
+            }}
+          >
+            <Box
+              component={Link}
+              to={item.url}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                p: 1,
+                textDecoration: "none",
+              }}
+            >
+              <Grid container alignItems="center">
+                <Grid item xs={1}>
+                  <Typography variant="h6" fontWeight={600}>
+                    {`${index + 1}.`}
+                  </Typography>
+                </Grid>
+                <Grid item xs={10}>
+                  <Typography
+                    variant="body1"
+                    fontWeight={600}
+                    color="text.primary"
+                  >
+                    {item.name}
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Box>
+          </Card>
+        ))}
+      </Box>
     </div>
   );
 }

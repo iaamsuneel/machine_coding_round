@@ -3,10 +3,11 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
+import { Avatar } from "@mui/material";
+import { images } from "../Shared/Utils";
 
 export default function Header() {
   const navigate = useNavigate();
@@ -27,7 +28,11 @@ export default function Header() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Machine
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Avatar
+            size="small"
+            sx={{ width: 35, height: 35 }}
+            src={images[3].image_url}
+          />
         </Toolbar>
       </AppBar>
     </Box>
