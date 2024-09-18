@@ -54,6 +54,10 @@ export const taskList = [
     name: "Calculator",
     url: "/calculator",
   },
+  {
+    name: "Search",
+    url: "/search",
+  },
 ];
 export const accodianData = [
   {

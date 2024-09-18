@@ -12,6 +12,7 @@ import Star from "./component/StarRating";
 import Calculator from "./component/Calculator";
 import { Box } from "@mui/material";
 import Layout from "./layout";
+import Search from "./component/Search";
 function App() {
   return (
     <Box>
@@ -26,6 +27,7 @@ function App() {
           <Route element={<TrafficLight />} path="/traffic" />
           <Route element={<Star />} path="/rating" />
           <Route element={<Calculator />} path="/calculator" />
+          <Route element={<Search />} path="/search" />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Layout>
