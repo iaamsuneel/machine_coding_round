@@ -9,6 +9,13 @@ const companyList = [
     noOfEmployee: 150000,
   },
   {
+    company: "Tata 1mg",
+    location: "Noida",
+    work: "Product Development",
+    funderYear: "1976",
+    noOfEmployee: 150000,
+  },
+  {
     company: "Paytm",
     location: "Noida",
     work: "Fintech",
@@ -154,7 +161,10 @@ export default function Search() {
     const filteredData = companyList.filter(
       (item) =>
         item.company.toLowerCase().includes(searchKey) ||
-        item.location.toLowerCase().includes(searchKey)
+        item.location.toLowerCase().includes(searchKey) ||
+        item.work.toLowerCase().includes(searchKey) /* ||
+        item.funderYear.toLowerCase().includes(searchKey) ||
+        Number(item.noOfEmployee).includes(Number(searchKey)) */
     );
     setData(filteredData);
   };
@@ -171,7 +181,10 @@ export default function Search() {
         style={{
           display: "flex",
           justifyContent: "center",
+          flexDirection: "column",
+          alignItems: "center",
           paddingTop: "20px",
+          
         }}
       >
         <div>
@@ -183,9 +196,9 @@ export default function Search() {
             onChange={handleSearchInput}
           />
         </div>
-      </div>
-      <div>
-        <ItemList dataList={data} />
+        <div>
+          <ItemList dataList={data} />
+        </div>
       </div>
     </>
   );
