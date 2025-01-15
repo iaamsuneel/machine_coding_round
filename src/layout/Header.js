@@ -7,7 +7,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
 import { Avatar } from "@mui/material";
-import { images } from "../Shared/Utils";
+import { images } from "../shared/Utils";
 
 export default function Header() {
   const navigate = useNavigate();

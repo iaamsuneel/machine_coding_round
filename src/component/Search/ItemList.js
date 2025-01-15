@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import React from "react";
 export default function ItemList({ dataList }) {
   const tableStyle = {
@@ -80,6 +81,7 @@ export default function ItemList({ dataList }) {
                 </td>
               </tr>
             )}
+            <Box></Box>
           </tbody>
         </table>
       </div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { images } from "../Shared/Utils";
+import { images } from "../shared/Utils";
 export default function Slider() {
   const [active, setActive] = useState(0);
   /* useEffect(() => {

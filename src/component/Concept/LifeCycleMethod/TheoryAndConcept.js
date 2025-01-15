@@ -71,7 +71,7 @@ console.log("Any cleanup activities/unsubscribing etc
 
 
 
-                                    //Comparison Table
+                                    // Comparison Table
 
 /* Feature	            Class Component	               Functional Component (Hooks)
 Initialization      	constructor()	                    useState

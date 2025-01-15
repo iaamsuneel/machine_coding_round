@@ -1,5 +1,5 @@
 import React from "react";
-import { accodianData } from "../../Shared/Utils";
+import { accodianData } from "../../shared/Utils";
 import AccordionCard from "./AccordionCard";
 
 export default function Accordion() {

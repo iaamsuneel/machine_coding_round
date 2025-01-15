@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Slider from "./component/Slider";
-import Home from "./component/Home";
+import Home from "./pages/Home";
 import Accordion from "./component/Accodion/Accordion";
 import PageNotFound from "./component/PageNotFound";
 import Todo from "./component/Todo";

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList";
+import usePagination from "../../hooks/customPagination";
 const companyList = [
   {
     company: "HCL Technologies",
@@ -155,6 +156,9 @@ export default function Search() {
   const handleSearchInput = (e) => {
     setSearchInput(e.target.value);
   };
+  const itemsPerPage = 5;
+  const { currentData, currentPage, totalPages, nextPage, prevPage, goToPage } =
+    usePagination(data, itemsPerPage);
   // search function
   const searchListOfCompany = (inputKey) => {
     let searchKey = inputKey.toLowerCase();
@@ -184,7 +188,6 @@ export default function Search() {
           flexDirection: "column",
           alignItems: "center",
           paddingTop: "20px",
-          
         }}
       >
         <div>
@@ -197,7 +200,28 @@ export default function Search() {
           />
         </div>
         <div>
-          <ItemList dataList={data} />
+          <ItemList dataList={currentData} />
+        </div>
+        <div style={{padding:"10px"}}>
+          <div>
+            <button onClick={prevPage} disabled={currentPage === 1}>
+              Prev
+            </button>
+            {Array.from({ length: totalPages }, (_, i) => (
+              <button
+                key={i}
+                onClick={() => goToPage(i + 1)}
+                style={{
+                  fontWeight: currentPage === i + 1 ? "bold" : "normal",
+                }}
+              >
+                {i + 1}
+              </button>
+            ))}
+            <button onClick={nextPage} disabled={currentPage === totalPages}>
+              Next
+            </button>
+          </div>
         </div>
       </div>
     </>
