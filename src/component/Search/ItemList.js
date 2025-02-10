@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import React from "react";
-export default function ItemList({ dataList }) {
+export default function ItemList(probs) {
+  const { dataList } = probs;
   const tableStyle = {
     fontFamily: "arial, sans-serif",
     borderCollapse: "collapse",
@@ -56,10 +57,10 @@ export default function ItemList({ dataList }) {
             </tr>
           </thead>
           <tbody>
-            {dataList.length > 0 ? (
-              dataList.map((item, index) => (
+            {dataList?.length > 0 ? (
+              dataList?.map((item, index) => (
                 <tr
-                  key={index}
+                  key={item?.funderYear}
                   style={{
                     backgroundColor: index % 2 === 0 ? "#f2f2f2" : "#ffffff",
                   }}

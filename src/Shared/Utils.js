@@ -58,6 +58,10 @@ export const taskList = [
     name: "Search",
     url: "/search",
   },
+  {
+    name: "Debouncing",
+    url: "/debounce",
+  },
 ];
 export const accodianData = [
   {

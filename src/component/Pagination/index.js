@@ -10,8 +10,8 @@ function PaginatedList() {
     <div>
       <h1>Paginated List</h1>
       <ul>
-        {currentData.map((item, index) => (
-          <li key={index}>{item}</li>
+        {currentData.map((item) => (
+          <li key={item.key}>{item}</li>
         ))}
       </ul>
       <div>

@@ -180,7 +180,6 @@ export default function Search() {
     }
   }, [searchInput]);
   return (
-    <>
       <div
         style={{
           display: "flex",
@@ -224,6 +223,5 @@ export default function Search() {
           </div>
         </div>
       </div>
-    </>
   );
 }

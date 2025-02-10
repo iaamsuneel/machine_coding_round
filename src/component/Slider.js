@@ -2,20 +2,6 @@ import React, { useState } from "react";
 import { images } from "../shared/Utils";
 export default function Slider() {
   const [active, setActive] = useState(0);
-  /* useEffect(() => {
-        for (var i = 0; i < images.length; i++) {
-            function slider(i) {
-                setTimeout(() => {
-                    setActive(i);
-                    console.log(i)
-                }, i*2000);
-            }
-            slider(i);
-        }
-        return ()=>{
-            setActive(0)
-        }
-    }, [active]); */
   return (
     <div
       style={{
@@ -35,7 +21,7 @@ export default function Slider() {
           images.map((item, index) => {
             return (
               <div
-                key={index}
+                key={item.image_url}
                 style={{
                   display: active !== index ? "none" : "",
                   position: "relative",
@@ -56,6 +42,7 @@ export default function Slider() {
                   {images.map((e, i) => {
                     return (
                       <span
+                      key={e.caption}
                         style={{
                           padding: "7px 12px",
                           margin: "3px",
@@ -65,7 +52,7 @@ export default function Slider() {
                           border: "none",
                           cursor: "pointer",
                         }}
-                        key={e.caption}
+                       
                         onClick={() => setActive(i)}
                         onMouseEnter={(e) => {
                           e.target.style.backgroundColor = "#a3e6a3";
@@ -91,7 +78,7 @@ export default function Slider() {
                   }}
                 >
                   <button
-                    disabled={active === 0 ? true : false}
+                    disabled={active === 0}
                     onClick={() => setActive(active - 1)}
                     style={{
                       border: "none",

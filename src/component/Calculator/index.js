@@ -1,40 +1,51 @@
-import { Box, TextField } from "@mui/material";
 import React, { useState } from "react";
+import { Box, TextField } from "@mui/material";
+
 const listSymble = [
-  { key: "AC" },
-  { key: "%" },
-  { key: "*" },
-  { key: "/" },
   { key: "7" },
   { key: "8" },
   { key: "9" },
-  { key: "×" },
+  { key: "/" },
   { key: "4" },
   { key: "5" },
   { key: "6" },
-  { key: "-" },
+  { key: "*" },
   { key: "1" },
   { key: "2" },
   { key: "3" },
-  { key: "+" },
+  { key: "-" },
   { key: "0" },
   { key: "." },
-  { key: "C" },
   { key: "=" },
+  { key: "+" },
+  { key: "C" }
 ];
+
 export default function Calculator() {
   const [input, setInput] = useState("");
+
   const handleInput = (e) => {
     const { id } = e.target;
-    if (id === "=") {
-      let value = eval(input);
-      setInput(String(value));
-    } else if (id === "C") {
+
+    // Handle "C" for clear
+    if (id === "C") {
       setInput("");
-    } else {
+    }
+    // Handle "=" for evaluation
+    else if (id === "=") {
+      try {
+        // Use Function constructor as a safer alternative to eval
+        setInput(String(new Function('return ' + input)()));
+      } catch (err) {
+        setInput("Error");
+      }
+    } 
+    // Handle regular inputs (numbers or operators)
+    else {
       setInput((val) => val + id);
     }
   };
+
   return (
     <Box
       sx={{
@@ -57,7 +68,9 @@ export default function Calculator() {
             type="text"
             fullWidth
             value={input}
-            onChange={(e) => setInput(e.target.value)}
+            inputProps={{
+              readOnly: true, // Make the input field read-only
+            }}
           />
         </Box>
         <Box
@@ -68,10 +81,10 @@ export default function Calculator() {
             flexFlow: "wrap",
           }}
         >
-          {listSymble.map((item, index) => {
+          {listSymble.map((item) => {
             return (
               <Box
-                key={index}
+                key={item.key}
                 sx={{
                   width: "60px",
                   backgroundColor: "#ece2e2",

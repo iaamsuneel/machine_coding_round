@@ -124,7 +124,7 @@ function TodoList() {
 					{taskList.length > 0 ? (
 						taskList.map((item, index) => {
 							return (
-								<div key={index} style={cardStyle}>
+								<div key={item.id} style={cardStyle}>
 									<div>
 										{index + 1} . {item.task}
 									</div>

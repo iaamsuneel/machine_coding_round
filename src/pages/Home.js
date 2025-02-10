@@ -14,9 +14,9 @@ export default function Home() {
           alignItems: "center",
         }}
       >
-        {taskList.map((item, index) => (
+        {taskList.map((item,index) => (
           <Card
-            key={index}
+            key={item.name}
             sx={{
               width: "100%",
               mt: 1,

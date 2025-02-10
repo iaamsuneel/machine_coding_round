@@ -13,6 +13,7 @@ import Calculator from "./component/Calculator";
 import { Box } from "@mui/material";
 import Layout from "./layout";
 import Search from "./component/Search";
+import Debounced from "./component/Debounce";
 function App() {
   return (
     <Box>
@@ -28,6 +29,7 @@ function App() {
           <Route element={<Star />} path="/rating" />
           <Route element={<Calculator />} path="/calculator" />
           <Route element={<Search />} path="/search" />
+          <Route element={<Debounced />} path="/debounce" />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Layout>

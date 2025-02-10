@@ -18,7 +18,7 @@ export default function Accordion() {
         {accodianData.length > 0 &&
           accodianData.map((item, index) => {
             return (
-              <div key={index}>
+              <div key={item.name}>
                 <AccordionCard item={item} index={index} />
               </div>
             );
