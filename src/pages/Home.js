@@ -2,9 +2,11 @@ import React from "react";
 import { taskList } from "../shared/Utils";
 import { Link } from "react-router-dom";
 import { Box, Card, Grid, Typography } from "@mui/material";
+
 export default function Home() {
   return (
-    <div>
+    //<div style={{height:'85vh', overflowY:'auto'}}>
+    <div style={{height: 'calc(100vh - 120px)', overflowY: 'auto'}}>
       <Box
         sx={{
           width: 400,
@@ -12,9 +14,10 @@ export default function Home() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          padding:1
         }}
       >
-        {taskList.map((item,index) => (
+        {taskList.map((item, index) => (
           <Card
             key={item.name}
             sx={{

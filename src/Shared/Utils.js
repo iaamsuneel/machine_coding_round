@@ -62,6 +62,14 @@ export const taskList = [
     name: "Debouncing",
     url: "/debounce",
   },
+  {
+    name: "Checkbox",
+    url: "/checkbox",
+  },
+  {
+    name: "Circle",
+    url: "/circle",
+  },
 ];
 export const accodianData = [
   {

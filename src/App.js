@@ -14,6 +14,8 @@ import { Box } from "@mui/material";
 import Layout from "./layout";
 import Search from "./component/Search";
 import Debounced from "./component/Debounce";
+import Checkbox from "./component/CheckBox";
+import Circle from "./component/Circle";
 function App() {
   return (
     <Box>
@@ -30,6 +32,8 @@ function App() {
           <Route element={<Calculator />} path="/calculator" />
           <Route element={<Search />} path="/search" />
           <Route element={<Debounced />} path="/debounce" />
+          <Route element={<Checkbox />} path="/checkbox" />
+          <Route element={<Circle />} path="/circle" />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Layout>

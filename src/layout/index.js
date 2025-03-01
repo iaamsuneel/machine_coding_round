@@ -3,7 +3,7 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 export default function Layout(probs) {
-  const { children } = probs
+  const { children } = probs;
   return (
     <Box sx={{ position: "relative", minHeight: "100vh" }}>
       <Box>
