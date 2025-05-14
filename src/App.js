@@ -16,6 +16,10 @@ import Search from "./component/Search";
 import Debounced from "./component/Debounce";
 import Checkbox from "./component/CheckBox";
 import Circle from "./component/Circle";
+import CustomeProgress from "./component/CustomeProgress";
+import Otp from "./component/OTP";
+import ChipsInput from "./component/ChipsInput";
+import NestedCheckBox from "./component/NestedCheckBox";
 function App() {
   return (
     <Box>
@@ -34,6 +38,10 @@ function App() {
           <Route element={<Debounced />} path="/debounce" />
           <Route element={<Checkbox />} path="/checkbox" />
           <Route element={<Circle />} path="/circle" />
+          <Route element={<CustomeProgress />} path="/progress-bar" />
+          <Route element={<Otp />} path="/otp" />
+          <Route element={<ChipsInput />} path="/chips" />
+          <Route element={<NestedCheckBox />} path="/nested-checkbox" />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Layout>

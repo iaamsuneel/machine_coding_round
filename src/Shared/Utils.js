@@ -23,54 +23,87 @@ export const images = [
 
 export const taskList = [
   {
+    id: 1,
     name: "Slider",
     url: "/slider",
   },
   {
+    id: 2,
     name: "Accordion",
     url: "/accodian",
   },
   {
+    id: 3,
     name: "ToDo App",
     url: "/todo",
   },
   {
+    id: 4,
     name: "Custom Tabs",
     url: "/tabs",
   },
   {
+    id: 5,
     name: "Pagination",
     url: "/pagination",
   },
   {
+    id: 6,
     name: "Traffic Light",
     url: "/traffic",
   },
   {
-    name: "Start Rating",
+    id: 7,
+    name: "Star Rating",
     url: "/rating",
   },
   {
+    id: 8,
     name: "Calculator",
     url: "/calculator",
   },
   {
+    id: 9,
     name: "Search",
     url: "/search",
   },
   {
+    id: 10,
     name: "Debouncing",
     url: "/debounce",
   },
   {
+    id: 11,
     name: "Checkbox",
     url: "/checkbox",
   },
   {
+    id: 11,
+    name: "Nested Checkbox",
+    url: "/nested-checkbox",
+  },
+  {
+    id: 12,
     name: "Circle",
     url: "/circle",
   },
+  {
+    id: 13,
+    name: "Progress Bar",
+    url: "/progress-bar",
+  },
+  {
+    id: 14,
+    name: "OTP",
+    url: "/otp",
+  },
+  {
+    id: 15,
+    name: "Chips Input",
+    url: "/chips",
+  },
 ];
+
 export const accodianData = [
   {
     name: "Accordion 1",

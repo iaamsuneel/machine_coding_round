@@ -1,0 +1,8 @@
+{
+    "rules": {
+      "javascript:S5850": "off",
+      "javascript:S4649": "off",
+      "javascript:S6847":"off",
+      "javascript:S3504" : "off"
+    }
+  }

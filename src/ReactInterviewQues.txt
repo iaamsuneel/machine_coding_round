@@ -1,0 +1,20 @@
+1. What is React?
+React is an opensource component based JavaScript library which is used
+to develop interactive user interfaces.
+
+2. What are the features of React ?
+Jsx
+Virtual dom
+one way data binding
+Uses reusable components to develop the views
+Supports server side rendering
+
+3. What is JSX ?
+JSX means javascript xml. It allows the user to write the code similar to
+html in their javascript files.
+This jsx will be transpiled into javascript that interacts with the browser
+when the application is built.
+
+4. What is DOM ?
+DOM means document object model. It is like a tree like structure that
+represents the elements of a webpage.
