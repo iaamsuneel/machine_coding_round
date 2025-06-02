@@ -1,0 +1,7 @@
+.paragraph {
+  display: flex;
+  justify-content: center;
+}
+.checkbox-item {
+  padding-left: 20px;
+}

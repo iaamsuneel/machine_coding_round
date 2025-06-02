@@ -78,29 +78,34 @@ export const taskList = [
     url: "/checkbox",
   },
   {
-    id: 11,
+    id: 12,
     name: "Nested Checkbox",
     url: "/nested-checkbox",
   },
   {
-    id: 12,
+    id: 13,
     name: "Circle",
     url: "/circle",
   },
   {
-    id: 13,
+    id: 14,
     name: "Progress Bar",
     url: "/progress-bar",
   },
   {
-    id: 14,
+    id: 15,
     name: "OTP",
     url: "/otp",
   },
   {
-    id: 15,
+    id: 16,
     name: "Chips Input",
     url: "/chips",
+  },
+  {
+    id: 17,
+    name: "Custome Tooltip",
+    url: "/tooltip",
   },
 ];
 

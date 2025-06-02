@@ -19,6 +19,7 @@ import Circle from "./component/Circle";
 import CustomeProgress from "./component/CustomeProgress";
 import Otp from "./component/OTP";
 import ChipsInput from "./component/ChipsInput";
+import CustomeTooltip from "./component/CustomeTooltip";
 import NestedCheckBox from "./component/NestedCheckBox";
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route element={<Otp />} path="/otp" />
           <Route element={<ChipsInput />} path="/chips" />
           <Route element={<NestedCheckBox />} path="/nested-checkbox" />
+          <Route element={<CustomeTooltip />} path="/tooltip" />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Layout>
