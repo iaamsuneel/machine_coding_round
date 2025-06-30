@@ -13,12 +13,10 @@ export default function Header() {
   const navigate = useNavigate();
   const [ipAddress, setIpAddress] = React.useState("");
   React.useEffect(() => {
-    // Fetch the IP address using ipify API
     axios
       .get("https://api.ipify.org?format=json")
       .then((response) => {
         setIpAddress(response.data.ip);
-        //console.log('response',response);
       })
       .catch((error) => {
         console.error("Error fetching IP address:", error);
@@ -44,9 +42,9 @@ export default function Header() {
             Machine
           </Typography>
           <Typography>
-            <div style={{display:'flex'}}>
+            <div style={{ display: "flex" }}>
               <p>IP Address : </p>
-              <p style={{ marginRight: "30px" ,paddingLeft:'3px' }}>
+              <p style={{ marginRight: "30px", paddingLeft: "3px" }}>
                 {ipAddress ? ipAddress : "Loading..."}
               </p>
             </div>
@@ -55,6 +53,7 @@ export default function Header() {
             size="small"
             sx={{ width: 35, height: 35 }}
             src={images[3].image_url}
+            alt="loading"
           />
         </Toolbar>
       </AppBar>

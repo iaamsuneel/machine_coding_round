@@ -21,6 +21,9 @@ import Otp from "./component/OTP";
 import ChipsInput from "./component/ChipsInput";
 import CustomeTooltip from "./component/CustomeTooltip";
 import NestedCheckBox from "./component/NestedCheckBox";
+import CustomeAutocomplete from "./component/Autocomplete";
+import StopWatch from "./component/StopWatch";
+import ReusableToast from "./component/Reusable-toast";
 function App() {
   return (
     <Box>
@@ -44,6 +47,9 @@ function App() {
           <Route element={<ChipsInput />} path="/chips" />
           <Route element={<NestedCheckBox />} path="/nested-checkbox" />
           <Route element={<CustomeTooltip />} path="/tooltip" />
+          <Route element={<CustomeAutocomplete />} path="/autocomplete" />
+          <Route element={<StopWatch />} path="/stopwatch" />
+          <Route element={<ReusableToast />} path="/reusable-toast" />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Layout>

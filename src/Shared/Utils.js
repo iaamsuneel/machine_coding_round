@@ -107,6 +107,16 @@ export const taskList = [
     name: "Custome Tooltip",
     url: "/tooltip",
   },
+  {
+    id: 18,
+    name: "StopWatch",
+    url: "/stopwatch",
+  },
+  {
+    id: 19,
+    name: "Reusable Toast",
+    url: "/reusable-toast",
+  },
 ];
 
 export const accodianData = [
