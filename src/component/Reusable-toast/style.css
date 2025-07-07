@@ -1,0 +1,38 @@
+button {
+  margin-left: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  filter: brightness(1.1);
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+}
+.success {
+  background-color: green !important;
+}
+.error {
+  background-color: red !important;
+}
+.warning {
+  background-color: rgb(225, 225, 119) !important;
+  color: rgb(20, 16, 24);
+}
+.toaster-message {
+  margin: 13px;
+  width: 350px;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  font-size: medium;
+  font-weight: 600;
+  transform: case in 0.3;
+}
