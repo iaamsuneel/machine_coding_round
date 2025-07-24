@@ -24,6 +24,7 @@ import NestedCheckBox from "./component/NestedCheckBox";
 import CustomeAutocomplete from "./component/Autocomplete";
 import StopWatch from "./component/StopWatch";
 import ReusableToast from "./component/Reusable-toast";
+import DragAndDrop from "./component/DragAndDrop";
 function App() {
   return (
     <Box>
@@ -50,6 +51,7 @@ function App() {
           <Route element={<CustomeAutocomplete />} path="/autocomplete" />
           <Route element={<StopWatch />} path="/stopwatch" />
           <Route element={<ReusableToast />} path="/reusable-toast" />
+          <Route element={<DragAndDrop />} path="/drag_drop" />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Layout>

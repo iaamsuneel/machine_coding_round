@@ -40,7 +40,6 @@ export default function ReusableToast() {
         </button>
       </div>
       {toasts.map(({ id, message, type, duration }) => {
-        console.log("id, message, type, duration", id, message, type, duration);
         return (
           <Toast key={id} message={message} type={type} duration={duration} />
         );

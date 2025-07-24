@@ -117,6 +117,11 @@ export const taskList = [
     name: "Reusable Toast",
     url: "/reusable-toast",
   },
+  {
+    id: 19,
+    name: "Drag and Drop",
+    url: "/drag_drop",
+  },
 ];
 
 export const accodianData = [

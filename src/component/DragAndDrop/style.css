@@ -1,0 +1,22 @@
+.container-item {
+  display: flex;
+  justify-content: space-evenly;
+}
+.left-container,
+.right-container {
+  border: 1px solid grey;
+  padding: 25px;
+  border-radius: 7px;
+  text-align: center;
+}
+.item {
+  font-size: medium;
+  background-color: #c8e0f9;
+  margin: 10px;
+  padding: 5px 30px;
+  border-radius: 7px;
+  cursor: grabbing;
+}
+.item:active{
+    background-color: rgb(238, 231, 231);
+}
